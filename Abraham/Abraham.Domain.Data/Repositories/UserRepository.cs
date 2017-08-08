@@ -22,7 +22,7 @@ namespace Abraham.Domain.Data.Repositories
             using (var ctx = GetDbContext())
             {
                 return ctx.Connection
-                            .Query<User>("SELECT Id, FirstName, LastName, Email, Balance FROM FOO.VW_User WHERE id = {id}", param, commandType: System.Data.CommandType.Text)
+                            .Query<User>("SELECT Id, FirstName, LastName, Email, Balance FROM FOO.VW_User WHERE Id = @id", param, commandType: System.Data.CommandType.Text)
                             .First();
             }
         }
