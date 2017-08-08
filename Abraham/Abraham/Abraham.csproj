@@ -190,8 +190,7 @@
     <Content Include="Views\User\Form.cshtml" />
     <Content Include="Views\ServiceType\Index.cshtml" />
     <Content Include="Views\ServiceType\Form.cshtml" />
-    <Content Include="Views\Session\Form.cshtml" />
-    <Content Include="Views\Session\Index.cshtml" />
+    <Content Include="Views\ServiceType\AddForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />

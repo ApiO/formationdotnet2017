@@ -13,11 +13,11 @@ namespace Abraham.Domain.Business.Services
             _repository = repository;
         }
 
-        public TypeService Get(int id)
+        public ServiceType Get(int id)
         {
             var typeServiceRepo = _repository.Get(id);
 
-            return new TypeService
+            return new ServiceType
             {
                 Id = typeServiceRepo.Id,
                 Description = typeServiceRepo.Description

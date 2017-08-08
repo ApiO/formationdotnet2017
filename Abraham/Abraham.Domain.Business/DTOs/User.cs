@@ -2,10 +2,10 @@
 {
     public class User
     {
-        public int Id;
-        public string FirstName;
-        public string LastName;
-        public string Email;
-        public float Balance;
+        public int Id { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Email { get; set; }
+        public float Balance { get; set; }
     }
 }

@@ -40,7 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DTOs\TypeService.cs" />
+    <Compile Include="DTOs\ServiceType.cs" />
     <Compile Include="Interfaces\IServiceTypeService.cs" />
     <Compile Include="Services\ServiceTypeService.cs" />
     <Compile Include="DTOs\Session.cs" />

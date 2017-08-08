@@ -1,0 +1,34 @@
+﻿@using System.Web.UI.HtmlControls
+@model Abraham.Domain.Business.DTOs.ServiceType
+
+
+@{
+    ViewBag.Title = "Add Form";
+}
+
+@using (Ajax.BeginForm("CreateServiceType", "ServiceType", new AjaxOptions
+{
+    HttpMethod = "Post", 
+    OnFailure = "OnFailure",
+    OnSuccess = "OnSuccess",
+    AllowCache = false
+}))
+{
+
+    @Html.LabelFor(model => model.Description)
+    @Html.EditorFor(model => model.Description)
+    <input type="submit" value="Create" />
+}
+
+@section scripts{
+@Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript">
+        function OnFailure(error) {
+            console.error(error);
+        };
+
+        function OnSuccess(data) {
+            console.log(data);
+        };
+    </script>
+}

@@ -3,6 +3,7 @@ using Abraham.Domain.Data.Interfaces;
 using System.Web.Mvc;
 using Abraham.Domain.Business.Services;
 using Abraham.Domain.Data.Repositories;
+using Abraham.Domain.Business.DTOs;
 
 namespace Abraham.Controllers
 {
@@ -28,6 +29,20 @@ namespace Abraham.Controllers
         {
             var serviceType = _service.Get(id);
             return View(serviceType);
+        }
+
+        public ActionResult AddForm()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public JsonResult CreateServiceType(ServiceType model)
+        {
+            if(ModelState.IsValid)
+                model.Id = 42;
+
+            return Json(model);
         }
     }
 }
