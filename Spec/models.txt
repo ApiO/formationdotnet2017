@@ -1,0 +1,61 @@
+Modéle de données
+
+User
+	USR_Id
+	USR_Firstname
+	USR_Lastname
+	USR_Email
+	USR_Balance
+	SSMS 2017
+
+SessionService
+	SSV_Id
+	SSV_Date
+	SSV_PaidDate
+	SSV_SSS_Id
+	SSV_SRV_Id
+	
+Session
+	SSS_Id
+	SSS_BeginDate
+	SSS_EndDate
+	SSS_USR_Id
+	SSS_CMP_Id
+	
+Invoice
+	IVC_Id
+	IVC_Code
+	IVC_Total
+	IVC_Date
+	IVC_PaidDate
+	
+InvoiceDetail
+	IVD_Id
+	IVD_SSS_Id
+	IVD_IVC_ID
+	
+TimeBalance
+	TMB_Id
+	TMB_Value
+	TMB_USR_Id
+	TMB_Date
+	
+TimeBalanceSession
+	TBS_SSS_Id
+	TBS_TMB_Id
+	
+Computer
+	CMP_Id
+	CMP_Description
+	CMP_Date
+	CMP_MaintenanceDate
+
+Service
+	SRV_Id
+	SRV_Description
+	SRV_Price
+	SRV_Type_Id
+	
+ServiceType
+	SVT_Id
+	SVT_Description

@@ -1,0 +1,25 @@
+Maquette (écrans)
+	Authentification
+	FRONT
+		accueil/home
+			news
+			*zone utilisateur: nom / crédit ...
+		*Zone utilisateur
+			financier			
+				ajout crédit
+				historique
+			*profile
+				*modifier
+	BACK
+		utilisateur en cours
+		gestion des services
+			CRUD
+		gestion des utilisateurs
+			*création
+			*ajout crédit
+			*gestion note
+		gestion des machines
+			gestion des réservations
+			gestion entretien
+		
+			

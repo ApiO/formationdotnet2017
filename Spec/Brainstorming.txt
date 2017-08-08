@@ -1,0 +1,33 @@
+Nom: abraham
+Objet: Gestion cyber café
+
+Features :
+	Utilisateur
+		compte
+		temps/crédit
+	Machines
+		OS
+		programmes
+		types
+	ardoise
+		Services
+			temps de jeu
+			café
+			...
+
+---------------------------------
+
+Frontoffice
+	connecter
+	changer infos perso
+	ajouter crédit
+	consulter historique (et pleurer)
+Backoffice
+	gestion des services
+	gestion des machines
+		gestion des réservations
+		gestion entretien
+	gestion des utilisateurs
+		comptes
+		activité utilisateurs
+		
