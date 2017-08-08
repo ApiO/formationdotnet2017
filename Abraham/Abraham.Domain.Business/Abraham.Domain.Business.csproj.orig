@@ -45,19 +45,28 @@
     <Compile Include="Services\ServiceTypeService.cs" />
     <Compile Include="DTOs\Service.cs" />
     <Compile Include="DTOs\Session.cs" />
+<<<<<<< Updated upstream
     <Compile Include="DTOs\Computer.cs" />
+=======
     <Compile Include="DTOs\TimeBalance.cs" />
+>>>>>>> Stashed changes
     <Compile Include="DTOs\User.cs" />
     <Compile Include="Interfaces\IServiceService.cs" />
     <Compile Include="Interfaces\ISessionService.cs" />
+<<<<<<< Updated upstream
     <Compile Include="Interfaces\IComputerService.cs" />
+=======
     <Compile Include="Interfaces\ITimeBalanceService.cs" />
+>>>>>>> Stashed changes
     <Compile Include="Interfaces\IUserService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ServiceService.cs" />
     <Compile Include="Services\SessionService.cs" />
+<<<<<<< Updated upstream
     <Compile Include="Services\ComputerService.cs" />
+=======
     <Compile Include="Services\TimeBalanceService.cs" />
+>>>>>>> Stashed changes
     <Compile Include="Services\UserService.cs" />
   </ItemGroup>
   <ItemGroup />

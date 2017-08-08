@@ -146,6 +146,7 @@
     <Compile Include="Controllers\ServiceController.cs" />
     <Compile Include="Controllers\ServiceTypeController.cs" />
     <Compile Include="Controllers\SessionController.cs" />
+    <Compile Include="Controllers\TimeBalanceController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -197,6 +198,8 @@
     <Content Include="Views\Session\Index.cshtml" />
     <Content Include="Views\Computer\Form.cshtml" />
     <Content Include="Views\Service\Form.cshtml" />
+    <Content Include="Views\TimeBalance\Form.cshtml" />
+    <Content Include="Views\TimeBalance\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
