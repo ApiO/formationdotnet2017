@@ -143,6 +143,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ServiceTypeController.cs" />
+    <Compile Include="Controllers\SessionController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -189,6 +190,8 @@
     <Content Include="Views\User\Form.cshtml" />
     <Content Include="Views\ServiceType\Index.cshtml" />
     <Content Include="Views\ServiceType\Form.cshtml" />
+    <Content Include="Views\Session\Form.cshtml" />
+    <Content Include="Views\Session\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
