@@ -22,7 +22,7 @@ namespace Abraham.Domain.Business.Services
                 FirstName = userRepo.FirstName,
                 LastName = userRepo.LastName,
                 Email = userRepo.Email,
-                Balance = userRepo.Balance,
+                Balance = userRepo.Balance
             };
         }
     }
