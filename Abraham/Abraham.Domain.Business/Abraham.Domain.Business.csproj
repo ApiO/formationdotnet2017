@@ -44,10 +44,8 @@
     <Compile Include="Interfaces\IServiceTypeService.cs" />
     <Compile Include="Services\ServiceTypeService.cs" />
     <Compile Include="DTOs\Session.cs" />
-    <Compile Include="DTOs\TimeBalance.cs" />
     <Compile Include="DTOs\User.cs" />
     <Compile Include="Interfaces\ISessionService.cs" />
-    <Compile Include="Interfaces\ITimeBalanceService.cs" />
     <Compile Include="Interfaces\IUserService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\SessionService.cs" />
