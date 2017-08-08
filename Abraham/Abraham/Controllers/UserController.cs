@@ -27,8 +27,6 @@ namespace Abraham.Controllers
         public ActionResult Form(int id)
         {
             var user = _service.Get(id);
-
-
             return View(user);
         }
     }

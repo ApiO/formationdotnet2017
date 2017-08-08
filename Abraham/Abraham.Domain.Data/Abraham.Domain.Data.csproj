@@ -43,9 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IServiceTypeRepository.cs" />
     <Compile Include="Interfaces\IUserRepository.cs" />
+    <Compile Include="Models\ServiceType.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ServiceTypeRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
     <Compile Include="SqlRepository.cs" />
     <Compile Include="Tools\DbContext.cs" />
