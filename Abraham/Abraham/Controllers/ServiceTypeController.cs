@@ -37,12 +37,12 @@ namespace Abraham.Controllers
         }
 
         [HttpPost]
-        public JsonResult CreateServiceType(ServiceType model)
+        public ActionResult CreateServiceType(ServiceType model)
         {
             if(ModelState.IsValid)
                 model.Id = 42;
 
-            return Json(model);
+            return Content("{id:42}","application/json");
         }
     }
 }
