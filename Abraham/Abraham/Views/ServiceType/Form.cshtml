@@ -4,4 +4,69 @@
 }
 
 <h2>Type de service</h2>
-<p>@Model.Description</p>
+
+@{ 
+    var ajaxOptions = new AjaxOptions
+    {
+        HttpMethod = "Post",
+        OnBegin = "OnBegin",
+        OnComplete = "OnComplete",
+        OnFailure = "OnFailure",
+        OnSuccess = "OnSuccess",
+        InsertionMode = InsertionMode.Replace,
+        UpdateTargetId = "francis"
+    };
+}
+<br />
+<br />
+<br />
+<br />
+@using (Ajax.BeginForm("CreateServiceType", "ServiceType", ajaxOptions))
+{
+    @Html.ValidationSummary(true)
+    @Html.LabelFor(model => model.Description)
+    @Html.EditorFor(model => model.Description)
+    @Html.ValidationMessageFor(model => model.Description)
+    <input type="submit" value="submit" />
+}
+
+<div id="francis"></div>
+
+@section scripts{
+    <script type="text/javascript">
+        function OnBegin() {
+            console.log("OnBegin");
+        };
+        function OnComplete() {
+            console.log("OnComplete");
+        };
+        function OnFailure(error) {
+            console.error(error);
+        };
+        function OnSuccess(data) {
+            console.warn(data);
+        };
+        function OnDescriptionExistsSuccess(data) {
+            console.log(data);
+            var result = JSON.parse(data);
+            if (result.state === true) {
+                $("input[type=submit]").hide();
+            }
+            else {
+                $("input[type=submit]").show();
+            }
+        };
+
+        $("#Description").on("change", function () {
+            $.ajax({
+                url:"@Url.Action("DescriptionExists", "ServiceType")",
+                data: {
+                    description: $(this).val()
+                },
+                type: "POST",
+                success: OnDescriptionExistsSuccess,
+                error: OnFailure
+            });
+        });
+    </script>
+}

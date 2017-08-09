@@ -25,10 +25,18 @@ namespace Abraham.Controllers
             return View();
         }
 
-        public ActionResult Form(int id)
+        public ActionResult Form(int? id)
         {
-            var serviceType = _service.Get(id);
-            return View(serviceType);
+            if (id != null)
+            {
+                //edition
+                var serviceType = _service.Get((int)id);
+                return View(serviceType);
+            }
+            else
+                //creation
+                return View();
+
         }
 
         public ActionResult AddForm()
@@ -39,10 +47,35 @@ namespace Abraham.Controllers
         [HttpPost]
         public ActionResult CreateServiceType(ServiceType model)
         {
-            if(ModelState.IsValid)
-                model.Id = 42;
+            try
+            {
+                if (ModelState.IsValid)
+                    model.Id = _service.Add(model);
 
-            return Content("{id:42}","application/json");
+            }
+            catch (System.Exception)
+            {
+                throw;
+            }
+
+            return Content("{id:" + model.Id + "}");
+        }
+
+        [HttpPost]
+        public ActionResult DescriptionExists(string description)
+        {
+            bool result = false;
+            try
+            {
+                if (ModelState.IsValid)
+                    result = _service.DescriptionExists(description);
+            }
+            catch (System.Exception)
+            {
+                throw;
+            }
+
+            return Content($"{{\"state\":{result.ToString().ToLower()}}}");
         }
     }
 }

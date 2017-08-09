@@ -1,7 +1,10 @@
-﻿using System;
+﻿
 using Abraham.Domain.Business.DTOs;
+using Model = Abraham.Domain.Data.Models.ServiceType;
+
 using Abraham.Domain.Business.Interfaces;
 using Abraham.Domain.Data.Interfaces;
+using System;
 
 namespace Abraham.Domain.Business.Services
 {
@@ -22,6 +25,21 @@ namespace Abraham.Domain.Business.Services
                 Id = typeServiceRepo.Id,
                 Description = typeServiceRepo.Description
             };
+        }
+
+        public int Add(ServiceType dto)
+        {
+            Model model = new Model()
+            {
+                Description = dto.Description
+            };
+
+            return _repository.Add(model);
+        }
+
+        public bool DescriptionExists(string description)
+        {
+            return _repository.DescriptionExists(description);
         }
     }
 }
