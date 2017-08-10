@@ -1,4 +1,4 @@
 language: csharp
-solution: Abraham\Abraham.sln
+solution: Abraham/Abraham.sln
 install:
-  - nuget restore Abraham\Abraham.sln
+  - nuget restore Abraham/Abraham.sln
