@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ApiO/formationdotnet2017.svg?branch=master)](https://travis-ci.org/ApiO/formationdotnet2017)
+
 # Disclaimer
 
 At your own risks.
