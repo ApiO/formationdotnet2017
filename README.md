@@ -1,6 +1,6 @@
 # Disclaimer
 
-At you own risks.
+At your own risks.
 
 # License
 
